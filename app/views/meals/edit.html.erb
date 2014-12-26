@@ -1,11 +1,10 @@
 <%= simple_form_for(@user, url: meals_path(@user), html: { method: :patch }) do |f| %>
   <%= f.error_notification %>
 
-  <h2>Set up a meeting for <%= Time.now.wday %></h2>
+  <h2>Set up a meeting for <%= Date::DAYNAMES[Chronic.parse('tomorrow').wday] %></h2>
 
   <div class="row">
     <div class="">
-      <h2>Setup</h2>
       <p>Set your preferred meeting day, time, and place.</p>
       <%= f.label :tod_morning_early %>
       <%= f.check_box :tod_morning_early %>
