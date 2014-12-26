@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141226012513) do
+ActiveRecord::Schema.define(version: 20141226020542) do
 
   create_table "identities", force: :cascade do |t|
     t.integer  "user_id"
@@ -41,6 +41,16 @@ ActiveRecord::Schema.define(version: 20141226012513) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.boolean  "tod_morning_early"
+    t.boolean  "tod_morning_middle"
+    t.boolean  "tod_morning_late"
+    t.boolean  "dow_monday"
+    t.boolean  "dow_tuesday"
+    t.boolean  "dow_wednesday"
+    t.boolean  "dow_thursday"
+    t.boolean  "dow_friday"
+    t.boolean  "dow_saturday"
+    t.boolean  "dow_sunday"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
