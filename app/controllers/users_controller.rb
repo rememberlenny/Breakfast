@@ -56,9 +56,7 @@ class UsersController < ApplicationController
     end
 
     def user_params
-      accessible = [ :name, :email ] # extend with your own params
-      accessible << [ :tod_morning_early, :tod_morning_middle, :tod_morning_late ]
-      accessible << [ :dow_monday, :dow_tuesday, :dow_wednesday, :dow_thursday, :dow_friday, :dow_saturday, :dow_sunday ]
+      accessible = [ :name, :email, :tod_morning_early, :tod_morning_middle, :tod_morning_late, :dow_monday, :dow_tuesday, :dow_wednesday, :dow_thursday, :dow_friday, :dow_saturday, :dow_sunday ]
       accessible << [ :password, :password_confirmation ] unless params[:user][:password].blank?
       params.require(:user).permit(accessible)
     end
