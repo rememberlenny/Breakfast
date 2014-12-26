@@ -1,2 +1,7 @@
 <h1>Status of <%= current_user.name %></h1>
 
+<% if current_user %>
+<%= current_user.tod_morning_early %>
+<%= current_user.tod_morning_middle %>
+<%= current_user.tod_morning_late %>
+<% end %>
