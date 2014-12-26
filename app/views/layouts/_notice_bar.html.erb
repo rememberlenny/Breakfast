@@ -1,0 +1,6 @@
+  <p>
+    <% if user_signed_in? %>
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+    <% end %>
+  </p>
