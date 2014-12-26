@@ -1,14 +1,15 @@
-<h1>Status of <%= current_user.name %></h1>
+<div class="row">
+  <div class="large-6 medium-6 column">
+    <h1>Status of <%= current_user.name %></h1>
 
-<% if current_user %>
-  <%= current_user.tod_morning_early == 1 ? "Early" : "" %>
-  <%= current_user.tod_morning_middle == 1 ? "Middle" : "" %>
-  <%= current_user.tod_morning_late == 1 ? "Late" : "" %>
-  <%= current_user.dow_monday == 1 ? "Monday" : "" %>
-  <%= current_user.dow_tuesday == 1 ? "Tuesday" : "" %>
-  <%= current_user.dow_wednesday == 1 ? "Wednesday" : "" %>
-  <%= current_user.dow_thursday == 1 ? "Thursday" : "" %>
-  <%= current_user.dow_friday == 1 ? "Friday" : "" %>
-  <%= current_user.dow_saturday == 1 ? "Saturday" : "" %>
-  <%= current_user.dow_sunday == 1 ? "Sunday" : "" %>
-<% end %>
+    <% if current_user %>
+      <%= current_user.tod_morning_early == 1 ? "Early" : "" %>
+      <%= current_user.tod_morning_middle == 1 ? "Middle" : "" %>
+      <%= current_user.tod_morning_late == 1 ? "Late" : "" %>
+    <% end %>
+  </div>
+  <div class="large-6 medium-6 column">
+    <%= image_tag 'nyc.png' %>
+  </div>
+</div>
+
