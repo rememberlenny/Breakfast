@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  match 'meals' => 'meals#update', via: [:patch]
+  get 'meals' => 'meals#edit'
+
   root 'static_pages#home'
 
   devise_for :users, :controllers => { omniauth_callbacks: 'omniauth_callbacks' }
