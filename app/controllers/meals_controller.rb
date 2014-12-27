@@ -24,7 +24,7 @@ class MealsController < ApplicationController
     end
 
     def user_params
-      accessible = [ :tod_morning_early, :tod_morning_middle, :tod_morning_late ]
+      accessible = [ :tod_morning_early, :tod_morning_middle, :tod_morning_late, :topics ]
       params.require(:user).permit(accessible)
     end
 
