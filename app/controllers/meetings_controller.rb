@@ -1,9 +1,9 @@
 class MeetingsController < ApplicationController
   def index
     @users = User.all
-    early  = []
-    middle = []
-    late   = []
+    @early  = []
+    @middle = []
+    @late   = []
 
     @users.each do |user|
       if user.tod_morning_early == 1

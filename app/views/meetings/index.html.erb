@@ -1,7 +1,24 @@
 <h1>Meetings#index</h1>
 
-<ul>
 
-</ul>
+<% if current_user.tod_morning_early %>
+  <h3>-Early-</h3>
+  <% @early.each do |user| %>
+    <%= user.uid %>
+  <% end %>
+<% end %>
 
+<% if current_user.tod_morning_middle %>
+  <h3>-Middle-</h3>
+  <% @middle.each do |user| %>
+    <%= user.uid %>
+  <% end %>
+<% end %>
+
+<% if current_user.tod_morning_late %>
+  <h3>-Late-</h3>
+  <% @late.each do |user| %>
+    <%= user.uid %>
+  <% end %>
+<% end %>
 
