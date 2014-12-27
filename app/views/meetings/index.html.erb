@@ -1,5 +1,8 @@
 <h1>Meetings#index</h1>
 
+<ul>
 <% @users.each do |user| %>
-<%= debug user %>
+<li>UID: <%= user.uid %></li>
 <% end %>
+</ul>
+
