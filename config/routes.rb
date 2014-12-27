@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'meetings/meetings'
-
-  get 'meetings/index'
-
-  get 'meetings/show'
+  get 'meetings' => 'meetings#index'
 
   match 'meals' => 'meals#update', via: [:patch]
   get 'meals' => 'meals#edit'
