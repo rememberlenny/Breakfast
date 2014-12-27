@@ -3,21 +3,21 @@
 <% if current_user.tod_morning_early == 1 %>
   <h3>-Early-</h3>
   <% @early.each do |user| %>
-    <%= user.uid %>
+    <%= user.uid %>: <%= user.topics %>
   <% end %>
 <% end %>
 
 <% if current_user.tod_morning_middle == 1 %>
   <h3>-Middle-</h3>
   <% @middle.each do |user| %>
-    <%= user.uid %>
+    <%= user.uid %>: <%= user.topics %>
   <% end %>
 <% end %>
 
 <% if current_user.tod_morning_late == 1 %>
   <h3>-Late-</h3>
   <% @late.each do |user| %>
-    <%= user.uid %>
+    <%= user.uid %>: <%= user.topics %>
   <% end %>
 <% end %>
 
