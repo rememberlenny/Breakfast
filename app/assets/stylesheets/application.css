@@ -13,3 +13,7 @@
  *= require_tree .
  *= require_self
  */
+
+.nyc-map img{
+  border: 1px solid #000;
+}
