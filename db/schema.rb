@@ -44,11 +44,10 @@ ActiveRecord::Schema.define(version: 20141227001003) do
     t.integer  "tod_morning_early"
     t.integer  "tod_morning_middle"
     t.integer  "tod_morning_late"
-    t.string   "place_brooklyn"
-    t.string   "place_uptown"
-    t.string   "place_midtown"
-    t.string   "place_downtown"
-    t.string   "place_queens"
+    t.string   "place_name"
+    t.string   "place_address"
+    t.float    "place_lon"
+    t.float    "place_lat"
     t.string   "uid"
   end
 
