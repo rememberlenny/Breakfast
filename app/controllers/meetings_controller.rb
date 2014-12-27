@@ -6,14 +6,16 @@ class MeetingsController < ApplicationController
     @late   = []
 
     @users.each do |user|
-      if user.tod_morning_early == 1
-        @early << user
-      end
-      if user.tod_morning_middle == 1
-        @middle << user
-      end
-      if user.tod_morning_late == 1
-        @late << user
+      if user != current_user
+        if user.tod_morning_early == 1
+          @early << user
+        end
+        if user.tod_morning_middle == 1
+          @middle << user
+        end
+        if user.tod_morning_late == 1
+          @late << user
+        end
       end
     end
   end

@@ -1,30 +1,23 @@
 <h1>Meetings#index</h1>
 
-
 <% if current_user.tod_morning_early == 1 %>
   <h3>-Early-</h3>
   <% @early.each do |user| %>
-    <% if user != current_user %>
-      <%= user.uid %>
-    <% end %>
+    <%= user.uid %>
   <% end %>
 <% end %>
 
 <% if current_user.tod_morning_middle == 1 %>
   <h3>-Middle-</h3>
   <% @middle.each do |user| %>
-    <% if user != current_user %>
-      <%= user.uid %>
-    <% end %>
+    <%= user.uid %>
   <% end %>
 <% end %>
 
 <% if current_user.tod_morning_late == 1 %>
   <h3>-Late-</h3>
   <% @late.each do |user| %>
-    <% if user != current_user %>
-      <%= user.uid %>
-    <% end %>
+    <%= user.uid %>
   <% end %>
 <% end %>
 
